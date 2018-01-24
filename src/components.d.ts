@@ -6,6 +6,36 @@
 
 
 import {
+  InnerComponent as InnerComponent
+} from './components/inner-component/inner-component';
+
+declare global {
+  interface HTMLInnerComponentElement extends InnerComponent, HTMLElement {
+  }
+  var HTMLInnerComponentElement: {
+    prototype: HTMLInnerComponentElement;
+    new (): HTMLInnerComponentElement;
+  };
+  interface HTMLElementTagNameMap {
+    "inner-component": HTMLInnerComponentElement;
+  }
+  interface ElementTagNameMap {
+    "inner-component": HTMLInnerComponentElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "inner-component": JSXElements.InnerComponentAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface InnerComponentAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   MyComponent as MyComponent
 } from './components/my-component/my-component';
 
