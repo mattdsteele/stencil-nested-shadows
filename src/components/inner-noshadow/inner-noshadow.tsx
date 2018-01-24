@@ -3,7 +3,7 @@ import { Component, Prop } from '@stencil/core';
 @Component({
   tag: 'inner-noshadow',
   styleUrl: 'inner-noshadow.scss',
-  shadow: true
+  shadow: false
 })
 export class InnerNoshadow {
   render() {
