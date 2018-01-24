@@ -6,29 +6,59 @@
 
 
 import {
-  InnerComponent as InnerComponent
-} from './components/inner-component/inner-component';
+  InnerNoshadow as InnerNoshadow
+} from './components/inner-noshadow/inner-noshadow';
 
 declare global {
-  interface HTMLInnerComponentElement extends InnerComponent, HTMLElement {
+  interface HTMLInnerNoshadowElement extends InnerNoshadow, HTMLElement {
   }
-  var HTMLInnerComponentElement: {
-    prototype: HTMLInnerComponentElement;
-    new (): HTMLInnerComponentElement;
+  var HTMLInnerNoshadowElement: {
+    prototype: HTMLInnerNoshadowElement;
+    new (): HTMLInnerNoshadowElement;
   };
   interface HTMLElementTagNameMap {
-    "inner-component": HTMLInnerComponentElement;
+    "inner-noshadow": HTMLInnerNoshadowElement;
   }
   interface ElementTagNameMap {
-    "inner-component": HTMLInnerComponentElement;
+    "inner-noshadow": HTMLInnerNoshadowElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "inner-component": JSXElements.InnerComponentAttributes;
+      "inner-noshadow": JSXElements.InnerNoshadowAttributes;
     }
   }
   namespace JSXElements {
-    export interface InnerComponentAttributes extends HTMLAttributes {
+    export interface InnerNoshadowAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
+  InnerShadow as InnerShadow
+} from './components/inner-shadow/inner-shadow';
+
+declare global {
+  interface HTMLInnerShadowElement extends InnerShadow, HTMLElement {
+  }
+  var HTMLInnerShadowElement: {
+    prototype: HTMLInnerShadowElement;
+    new (): HTMLInnerShadowElement;
+  };
+  interface HTMLElementTagNameMap {
+    "inner-shadow": HTMLInnerShadowElement;
+  }
+  interface ElementTagNameMap {
+    "inner-shadow": HTMLInnerShadowElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "inner-shadow": JSXElements.InnerShadowAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface InnerShadowAttributes extends HTMLAttributes {
       
     }
   }

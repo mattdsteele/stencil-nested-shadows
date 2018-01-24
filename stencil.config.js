@@ -1,7 +1,7 @@
 exports.config = {
   namespace: 'mycomponent',
   generateDistribution: true,
-  bundles: [{ components: ['my-component', 'inner-component'] }]
+  bundles: [{ components: ['my-component', 'inner-shadow', 'inner-noshadow'] }]
 };
 
 exports.devServer = {
